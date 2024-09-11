@@ -16,28 +16,26 @@ Make sure you have the following installed on your machine:
 Python 3.8 or higher
 Docker (optional for containerization)
 1. Setup Instructions (Running Locally)
+   
 Step 1: Clone the Repository
-bash
 git clone <repository-url>
 cd my_fastapi_project
+
 Step 2: Install Dependencies
 Create and activate a virtual environment:
-
-bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install the required dependencies:
 
-bash
-
+step 3:Install the required dependencies
 pip install -r requirements.txt
-Step 3: Set up the Database
+
+Step 4: Set up the Database
 You can use SQLite for local development (which is already configured in the project). If you wish to use another database, update the connection string in database.py.
 
-Step 4: Run the FastAPI Application
+Step 5: Run the FastAPI Application
 Use Uvicorn to run the FastAPI app:
 
-bash
+
 
 uvicorn app.main:app --reload
 You should now see the application running at:
@@ -45,12 +43,12 @@ You should now see the application running at:
 arduino
 
 http://127.0.0.1:8000
-2. API Documentation
+1. API Documentation
 FastAPI automatically generates API documentation. To view the interactive API docs, go to:
 
 Swagger UI: http://127.0.0.1:8000/docs
 Redoc: http://127.0.0.1:8000/redoc
-3. Using the API
+2. Using the API
 Create a User
 POST /users/
 Payload:
@@ -80,7 +78,7 @@ json
 }
 Get All Items
 GET /items/
-4. Running Tests
+3. Running Tests
 Unit tests are included to test the API functionality using pytest.
 
 Step 1: Install pytest
@@ -122,9 +120,9 @@ Your application should now be accessible at:
 arduino
 Copy code
 http://localhost:8000
+
 6. Project Structure
-bash
-Copy code
+   
 my_fastapi_project/
     ├── __init__.py
     ├── crud.py
@@ -141,22 +139,14 @@ my_fastapi_project/
 7. Additional Notes
 You can configure the database connection by editing database.py to use PostgreSQL, MySQL, or any other database of your choice.
 The default database is SQLite for simplicity and ease of testing.
+
 8. References
+    
 FastAPI Documentation
 SQLAlchemy Documentation
 Pytest Documentation
 Final Steps to Submit the Task:
 Push the Project to GitHub
 
-bash
-Copy code
-git add .
-git commit -m "Final commit"
-git push origin main
-Submit your GitHub repository URL with the task submission platform.
 
-Optional: Push the Docker image to Docker Hub if required for submission:
-
-docker tag my-fastapi-app yourdockerhubusername/my-fastapi-app
-docker push yourdockerhubusername/my-fastapi-app
-That’s it! You've now completed the project setup, testing, and Dockerization. Submit the necessary URLs, and you're done.
+https://github.com/chinnu940701/my_fastapi_project.git
